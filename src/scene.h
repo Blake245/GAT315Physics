@@ -21,9 +21,11 @@ public:
 
 	void SetCamera(SceneCamera* camera) { m_camera = camera; }
 	SceneCamera* GetCamera() { return m_camera; }
-
 protected:
 	void DrawGrid(float slices, float thickness, const Color& color);
+	void DrawText(const std::string& text, const Vector2& world, int fontSize, Color color);
+	void DrawCircle(const Vector2& world, float radius, Color color);
+	void DrawLine(const Vector2& v1, const Vector2& v2, float thickness, Color color);
 
 protected:
 	int m_width{ 0 };
